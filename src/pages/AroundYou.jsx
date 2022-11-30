@@ -23,7 +23,8 @@ const CountryTracks = () => {
       .finally(() => setLoading(false));
   }, [country]);
 
-  if (isFetching && loading) return <Loader title="Loading songs around you" />;
+  if (isFetching && loading)
+    return <Loader title="Loading songs around you..." />;
 
   if (error && country) return <Error />;
 
