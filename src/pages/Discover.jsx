@@ -16,7 +16,7 @@ const Discover = () => {
     isFetching,
     error,
   } = useGetSongsByGenreQuery(genreListId || "POP");
-  console.log("Top Charts from Discover", topCharts);
+  // console.log("Top Charts from Discover", topCharts);
 
   const genreTitle =
     genres.find(({ value }) => value === genreListId)?.title || "Pop";

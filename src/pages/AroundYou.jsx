@@ -16,7 +16,9 @@ const CountryTracks = () => {
     // if you will face issue like Failed to load resource: net::ERR_BLOCKED_BY_CLIENT then remove adBlocks from the browser
     axios
       .get(
-        "https://geo.ipify.org/api/v2/country?apiKey=at_evLxlsK0qnKH5LQOtv78jKdUuxlNk"
+        `https://geo.ipify.org/api/v2/country?apiKey=${
+          import.meta.env.VITE_GEO_API_KEY
+        }`
       )
       .then((res) => setCountry(res?.data?.location?.country))
       .catch((err) => console.log(err))

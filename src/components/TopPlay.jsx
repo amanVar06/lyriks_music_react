@@ -19,11 +19,11 @@ const TopChartCard = ({
   handlePauseClick,
   handlePlayClick,
 }) => (
-  <div className="w-full flex flex-row items-center hover:bg-[#4c426e] py-2 p-4 rounded-lg cursor-pointer mb-2">
+  <div className="w-full flex flex-row items-center hover:bg-[#4c426e] py-1 p-2 rounded-lg cursor-pointer mb-2">
     <h3 className="font-bold text-base text-white mr-3">{index + 1}</h3>
-    <div className="flex-1 flex flex-row justify-between">
+    <div className="flex-1 flex flex-row justify-between items-center">
       <img
-        className="w-20 h-20 rounded-lg"
+        className="w-12 h-12 rounded-lg"
         src={song?.images?.coverart}
         alt={song?.title}
       />
@@ -83,7 +83,7 @@ const TopPlay = () => {
           </Link>
         </div>
 
-        <div className="mt-4 flex flex-col gap-1">
+        <div className="mt-2 flex flex-col gap-1">
           {topPlays?.map((song, i) => (
             <TopChartCard
               key={song?.key}
@@ -118,7 +118,7 @@ const TopPlay = () => {
           {topPlays?.map((song, i) => (
             <SwiperSlide
               key={song?.key}
-              style={{ width: "25%", height: "auto" }}
+              style={{ width: "20%", height: "auto" }}
               className="shadow-lg rounded-full animate-slideright"
             >
               <Link to={`/artists/${song?.artists[0]?.adamid}`}>
